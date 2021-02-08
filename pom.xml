@@ -15,7 +15,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>14</version>
+            <version>11.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -26,8 +26,9 @@
         <dependency>
             <groupId>com.jfoenix</groupId>
             <artifactId>jfoenix</artifactId>
-            <version>9.0.1</version>
+            <version>8.0.9</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
@@ -43,6 +44,18 @@
                 <version>0.0.3</version>
                 <configuration>
                     <mainClass>org.example.App</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <release>11</release>
+                    <executable>javac11</executable>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>

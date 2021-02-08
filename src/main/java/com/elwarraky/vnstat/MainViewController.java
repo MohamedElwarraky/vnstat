@@ -1,6 +1,5 @@
 package com.elwarraky.vnstat;
 
-
 import com.jfoenix.controls.JFXComboBox;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -35,7 +34,7 @@ public class MainViewController {
     private Service service;
 
     @FXML
-    void initialize(){
+    void initialize() {
         this.xAxis.setAutoRanging(true);
         this.yAxis.setAutoRanging(true);
         this.yAxis.setTickLabelFormatter(new StringConverter<Number>() {
@@ -61,7 +60,7 @@ public class MainViewController {
     void connectionTypeComboBoxOnAction(ActionEvent event) {
         String cat = this.displayComboBox.getValue();
         String type = this.connectionTypeComboBox.getValue();
-        if(this.lineChart.getData() != null){
+        if (this.lineChart.getData() != null) {
             this.lineChart.getData().clear();
         }
         this.lineChart.setData(service.getLineChartData(type, cat));
@@ -72,7 +71,7 @@ public class MainViewController {
     void displayComboBoxOnAction(ActionEvent event) {
         String cat = this.displayComboBox.getValue();
         String type = this.connectionTypeComboBox.getValue();
-        if(this.lineChart.getData() != null){
+        if (this.lineChart.getData() != null) {
             this.lineChart.getData().clear();
         }
         this.lineChart.setData(service.getLineChartData(type, cat));

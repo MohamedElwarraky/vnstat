@@ -183,7 +183,9 @@ public class Service {
 
         int factor = 1024;
         String units = "KMGTPE";
-        if (bytes < factor) return bytes + " B";
+        if (bytes < factor) {
+            return bytes + " B";
+        }
 
         int exp = (int) (Math.log(bytes) / Math.log(factor));
 
